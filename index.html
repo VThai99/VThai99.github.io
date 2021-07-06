@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Introduce</title>
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <div class="text_animation">
+            <div class="word">Hi</div>
+            <div class="word">My name is Thai</div>
+            <div class="word">I was born in 1999</div>
+            <div class="word">My home town is Bac Giang</div>
+            <div class="word">I'm a web developer</div>
+            <div class="word">Thanks you <i class="fas fa-heart"></i></div>
+            <div class="name">
+                <div class="test1">
+                    <span>L</span>
+                    <span>O</span>
+                    <span>V</span>
+                    <span>E</span>
+                </div>
+                <div class="test2">
+                    <span>H</span>
+                    <span>A</span>
+                    <span>T</span>
+                    <span>E</span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="https://www.facebook.com/thai.viet.7140" class="hover-this"><span
+                    class="fab fa-facebook"></span></a>
+            <a href="https://github.com/VThai99" class="hover-this"><span class="fab fa-github"></span></a>
+            <a href="https://www.linkedin.com/in/ho%C3%A0ng-vi%E1%BB%87t-th%C3%A1i-2aa662216/" class="hover-this"><span
+                    class="fab fa-linkedin"></span></a>
+            <div class="cursor"></div>
+        </nav>
+    </div>
+    <script>
+
+        (function () {
+
+            const link = document.querySelectorAll('nav > .hover-this');
+            const cursor = document.querySelector('.cursor');
+
+            const animateit = function (e) {
+                const span = this.querySelector('span');
+                const { offsetX: x, offsetY: y } = e,
+                    { offsetWidth: width, offsetHeight: height } = this,
+
+                    move = 25,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
+
+                span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+                if (e.type === 'mouseleave') span.style.transform = '';
+            };
+
+            const editCursor = e => {
+                const { clientX: x, clientY: y } = e;
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+            };
+
+            link.forEach(b => b.addEventListener('mousemove', animateit));
+            link.forEach(b => b.addEventListener('mouseleave', animateit));
+            window.addEventListener('mousemove', editCursor);
+
+        })();
+
+    </script>
+</body>
+
+</html>
