@@ -34,11 +34,7 @@ ol,
 ul {
   list-style: none;
 }
-.test1 {
-  font-size: 50px;
-  font-weight: 900;
-  text-align: center;
-}
+
 .test1 span {
   background-image: linear-gradient(
     to right bottom,
@@ -142,11 +138,6 @@ ul {
   }
 }
 
-.test2 {
-  font-size: 10px;
-  font-weight: 900;
-  text-align: center;
-}
 .test2 span {
   background-image: linear-gradient(
     to right bottom,
@@ -302,6 +293,9 @@ ul {
 .name {
   position: absolute;
   top: 0;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
 }
 
 nav a {
@@ -376,16 +370,6 @@ a:hover {
   }
 }
 
-@media (max-width: 900px) {
-  nav {
-    top: 30%;
-  }
-
-  .hover-this {
-    width: 100%;
-    padding: 20px 0;
-    display: inline-block;
-  }
 }
 @keyframes zoom {
   0% {
@@ -434,7 +418,7 @@ a:hover {
     opacity: 1;
   }
   100% {
-    top: 80%;
+    top:60%;
     left: 45%;
     opacity: 0;
   }
@@ -460,7 +444,7 @@ a:hover {
     opacity: 1;
   }
   100% {
-    top: 90%;
+    top: 80%;
     right: 45%;
     opacity: 0;
   }
@@ -480,7 +464,7 @@ a:hover {
   0% {
     top: 0;
     opacity: 0;
-    transform:rotate(65deg) scale(1);
+    transform: rotate(65deg) scale(1);
   }
   50% {
     opacity: 1;
@@ -488,7 +472,7 @@ a:hover {
   100% {
     top: 75%;
     opacity: 0;
-    transform:rotate(65deg) scale(.2);
+    transform: rotate(65deg) scale(0.2);
   }
 }
 .nav-wrapper .img_animation:nth-child(4) {
@@ -514,6 +498,71 @@ a:hover {
     top: 90%;
     left: 10%;
     opacity: 0;
-    transform:rotate(65deg) scale(.2);
+    transform: rotate(65deg) scale(0.2);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  nav {
+    display: flex;
+  }
+  .text_animation {
+    font-size: 50px;
+    text-align: center;
+  }
+  .name{
+    font-size: 10px;
+  }
+  .hover-this {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
+}
+@media (max-width: 414px) {
+  .text_animation {
+    font-size: 10px;
+    text-align: center;
+  }
+  .name span{
+    font-size: 10px;
+  }
+  .hover-this {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
+  @keyframes changeColor {
+    0% {
+      top: 0rem;
+      font-size: 15px;
+    }
+
+    50% {
+      top: 5rem;
+      font-size: 5px;
+    }
+   
+    100% {
+      top: 0rem;
+      font-size: 15px;
+    }
+  } 
+  @keyframes changeColor2 {
+    0% {
+      top: 0rem;
+      font-size: 15px;
+    }
+
+    50% {
+      top: 5rem;
+      font-size: 5px;
+    }
+   
+    100% {
+      top: 0rem;
+      font-size: 15px;
+    }
   }
 }
