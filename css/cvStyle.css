@@ -6,10 +6,11 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  font-family: 'Font Awesome 5 Pro'
 }
 .container-cv {
-  background: #07efe3c7;
-
+  background: #fff;
+  opacity: 0.9;
 }
 .nav-cv {
   background-color: transparent !important;
@@ -65,13 +66,22 @@
 }
 
 .education-card-cv{
-    background-color: #16706c;
-    border-radius: 10px;
+  background-color: #ffecec;
+  border-radius: 10px;
+  box-shadow: 20px 19px 20px 0px;
 }
 
 
-
-
+.custom-nav li{
+  text-shadow: 0px 0px 20px rgb(0, 5, 9);
+  transition: all 1s;
+  font-weight: 600;
+}
+.custom-nav li:hover{
+  text-shadow: none;
+  font-weight: 900;
+  transition: all 1s;
+}
 
 
 /* timeline */
@@ -205,3 +215,14 @@
 }
 
 
+.project-name{
+  font-size: 17px;
+  font-weight: 600;
+}
+.project-time{
+  font-size: 15px;
+}
+.project-detail{
+  padding: 10px;
+  /* border: 1px solid #16706c */
+}
